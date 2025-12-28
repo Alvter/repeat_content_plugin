@@ -4,15 +4,15 @@
     "version": "1.0.0",
     "description": "自动复读群内消息(不改变reply)",
     "author": {
-        "name": "Hickey",
-        "url": ""
+        "name": "Alvter",
+        "url": "https://github.com/Alvter"
     },
-    "license": "GPL-v3.0-or-later",
+    "license": "MIT",
     "host_application": {
         "min_version": "0.8.0"
     },
-    "homepage_url": "",
-    "repository_url": "",
+    "homepage_url": "https://github.com/Alvter/repeat_content_plugin",
+    "repository_url": "https://github.com/Alvter/repeat_content_plugin",
     "keywords": ["repeat", "repeater", "group", "fun"],
     "categories": ["Fun", "Group"],
     "default_locale": "zh-CN",
@@ -23,7 +23,7 @@
         "components": [
             {
                 "type": "event_handler",
-                "name": "repeat_same_content_handler",
+                "name": "repeat_content_handler",
                 "description": "检测群内连续相同内容并复读"
             }
         ],
@@ -34,5 +34,5 @@
             "支持过滤机器人消息"
         ]
     },
-    "id": "Hickey.repeat_content_plugin"
+    "id": "Alvter.repeat_content_plugin"
 }
