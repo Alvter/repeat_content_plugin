@@ -1,0 +1,21 @@
+# 连续相同内容复读插件配置文件
+
+[plugin]
+# 是否启用插件
+enabled = true
+
+[repeat]
+# 时间窗口x：在x分钟内
+time_window_minutes = 5
+
+# 消息数量窗口y：在y条消息内
+message_window_size = 10
+
+# 相同消息数量z：检测到z条相同消息则触发复读
+required_same_count = 3
+
+# 最大消息长度限制，超过此长度的消息不会触发复读，默认100
+max_message_length = 100
+
+# 同一内容复读冷却时间（分钟），在冷却时间内同一内容不会重复复读，默认10
+repeat_cooldown_minutes = 10

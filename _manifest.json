@@ -1,0 +1,38 @@
+{
+    "manifest_version": 1,
+    "name": "麦麦自动+1群内消息插件",
+    "version": "1.0.0",
+    "description": "自动复读群内消息(不改变reply)",
+    "author": {
+        "name": "Hickey",
+        "url": ""
+    },
+    "license": "GPL-v3.0-or-later",
+    "host_application": {
+        "min_version": "0.8.0"
+    },
+    "homepage_url": "",
+    "repository_url": "",
+    "keywords": ["repeat", "repeater", "group", "fun"],
+    "categories": ["Fun", "Group"],
+    "default_locale": "zh-CN",
+    "locales_path": "_locales",
+    "plugin_info": {
+        "is_built_in": false,
+        "plugin_type": "fun",
+        "components": [
+            {
+                "type": "event_handler",
+                "name": "repeat_same_content_handler",
+                "description": "检测群内连续相同内容并复读"
+            }
+        ],
+        "features": [
+            "检测群内连续相同的消息内容",
+            "达到设定次数时自动复读",
+            "可配置复读触发条件",
+            "支持过滤机器人消息"
+        ]
+    },
+    "id": "Hickey.repeat_content_plugin"
+}
