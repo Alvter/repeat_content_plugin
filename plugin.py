@@ -54,7 +54,16 @@ class RepeatSameContentHandler(BaseEventHandler):
         
         # 获取消息的纯文本内容
         message_content = message.plain_text
-        if not message_content or len(message_content) > max_message_length:
+
+        # 修复：定义不需要复读的特征码/关键词黑名单
+        ignore_keywords = ["[表情包：", "[picid:", "这是QQ的一个功能"]
+        
+        # 如果消息为空，或者包含了黑名单中的任意一个词，复读机立即丢包拦截
+        if not message_content or any(keyword in message_content for keyword in ignore_keywords):
+            return True, True, None, None, None
+
+        # 检查消息长度限制
+        if len(message_content) > max_message_length:
             return True, True, None, None, None
         
         # 获取当前时间
